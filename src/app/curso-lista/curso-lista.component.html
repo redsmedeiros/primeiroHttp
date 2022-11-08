@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="cabecalho">
+    <h1>Cursos</h1>
+    <a [routerLink]="['novo']">Novo Cursos</a>
+  </div>
+
+  <div class="corpo">
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let curso of cursos">
+          <th scope="row">{{ curso.id }}</th>
+          <td>{{ curso.nome }}</td>
+          <td>
+            <button class="editar">Editar</button>
+            <button class="deletar">Deletar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
